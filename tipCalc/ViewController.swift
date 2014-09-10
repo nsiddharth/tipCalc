@@ -32,6 +32,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    @IBAction func closeEditing(sender : AnyObject) {
+        view.endEditing(true)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -39,7 +42,7 @@ class ViewController: UIViewController {
 
     @IBAction func onTap(sender : AnyObject) {
        
-        view.endEditing(true)
+        self.view.endEditing(true)
     }
     
     @IBAction func onSlide(sender : AnyObject) {
@@ -60,7 +63,7 @@ class ViewController: UIViewController {
         var total = bill + percentage*bill/100
         
         
-        totalLabel.text="your total is: \(total)"
+        totalLabel.text=": \(total)"
     
     
     }
