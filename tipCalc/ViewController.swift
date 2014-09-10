@@ -23,8 +23,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         billField.keyboardType = UIKeyboardType.DecimalPad
         
-        tipLabel.text="Test text"
-        totalLabel.text=" "
+        
+        
+        
+        
+        tipLabel.text="$0.00"
+        totalLabel.text="0"
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -34,35 +38,71 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onTap(sender : AnyObject) {
-        updateValues()
+       
         view.endEditing(true)
     }
     
     @IBAction func onSlide(sender : AnyObject) {
+        calculate()
         
+    }
+    
+    func calculate(){
         var tipVal:Float = tipSlider.value
         
         var percentage = tipVal*100
         
-        tipLabel.text="\(percentage)"
+        tipLabel.text="\(percentage) %"
         
         var bill = NSString (string:billField.text).floatValue
-
+        
         
         var total = bill + percentage*bill/100
         
         
-        totalLabel.text="\(total)"
+        totalLabel.text="your total is: \(total)"
+    
+    
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        println("view will appear")
+        var defaults = NSUserDefaults.standardUserDefaults()
+        var tipPercent = defaults.integerForKey("default_tip")
+        tipSlider.value = Float (tipPercent)/100
+        calculate()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        println("view did appear")
+        var defaults = NSUserDefaults.standardUserDefaults()
+        var tipPercent = defaults.integerForKey("default_tip")
+        tipSlider.value = Float (tipPercent)/100
+        calculate()
         
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        println("view will disappear")
+        var defaults = NSUserDefaults.standardUserDefaults()
+        var tipPercent = defaults.integerForKey("default_tip")
+         tipSlider.value = Float (tipPercent)/100
+        calculate()
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        println("view did disappear")
+        var defaults = NSUserDefaults.standardUserDefaults()
+        var tipPercent = defaults.integerForKey("default_tip")
+         tipSlider.value = Float (tipPercent)/100
+        calculate()
     }
 
-    func updateValues(){
-    
-        
-        
-        
-        
-    }
+
     
 }
 

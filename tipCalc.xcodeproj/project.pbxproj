@@ -12,6 +12,7 @@
 		C224D74319BEBB8100A2CFA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C224D74119BEBB8100A2CFA1 /* Main.storyboard */; };
 		C224D74519BEBB8100A2CFA1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C224D74419BEBB8100A2CFA1 /* Images.xcassets */; };
 		C224D75119BEBB8100A2CFA1 /* tipCalcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C224D75019BEBB8100A2CFA1 /* tipCalcTests.swift */; };
+		C224D75C19BFC65100A2CFA1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C224D75B19BFC65100A2CFA1 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		C224D74A19BEBB8100A2CFA1 /* tipCalcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tipCalcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C224D74F19BEBB8100A2CFA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C224D75019BEBB8100A2CFA1 /* tipCalcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipCalcTests.swift; sourceTree = "<group>"; };
+		C224D75B19BFC65100A2CFA1 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +77,8 @@
 		C224D73A19BEBB8100A2CFA1 /* tipCalc */ = {
 			isa = PBXGroup;
 			children = (
+				C224D75A19BFC63100A2CFA1 /* Contoller group */,
 				C224D73D19BEBB8100A2CFA1 /* AppDelegate.swift */,
-				C224D73F19BEBB8100A2CFA1 /* ViewController.swift */,
 				C224D74119BEBB8100A2CFA1 /* Main.storyboard */,
 				C224D74419BEBB8100A2CFA1 /* Images.xcassets */,
 				C224D73B19BEBB8100A2CFA1 /* Supporting Files */,
@@ -107,6 +109,15 @@
 				C224D74F19BEBB8100A2CFA1 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C224D75A19BFC63100A2CFA1 /* Contoller group */ = {
+			isa = PBXGroup;
+			children = (
+				C224D73F19BEBB8100A2CFA1 /* ViewController.swift */,
+				C224D75B19BFC65100A2CFA1 /* SettingsViewController.swift */,
+			);
+			name = "Contoller group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +221,7 @@
 			files = (
 				C224D74019BEBB8100A2CFA1 /* ViewController.swift in Sources */,
 				C224D73E19BEBB8100A2CFA1 /* AppDelegate.swift in Sources */,
+				C224D75C19BFC65100A2CFA1 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
